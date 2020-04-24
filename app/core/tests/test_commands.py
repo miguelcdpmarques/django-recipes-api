@@ -12,7 +12,7 @@ class CommandTests(TestCase):
             gi.return_value = True
             call_command('wait_for_db')
             self.assertEqual(gi.call_count, 1)
-    
+
     @patch('time.sleep', return_value=True)
     def test_wait_for_db(self, ts):
         """Test waiting for db"""
